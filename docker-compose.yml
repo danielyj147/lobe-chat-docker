@@ -1,0 +1,11 @@
+version: "3.4"
+
+services:
+  lobe-chat:
+    image: lobehub/lobe-chat:latest
+    restart: always
+    ports:
+      - 3210:3210
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ACCESS_CODE=${ACCESS_CODE}
